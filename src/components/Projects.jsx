@@ -18,15 +18,28 @@ const projects = [
     {
         id: 2,
         name: "AER Refrigeração",
-        category: "Catálogo Interativo 3D",
+        category: "Catálogo Interativo",
         description:
-            "Plataforma digital completa para a AER Refrigeração, destacando serviços de instalação e manutenção de ar-condicionado, com formulário de orçamento e integração com WhatsApp.",
+            "Plataforma digital da AER Refrigeração, focada em soluções de refrigeração comercial e industrial. O site destaca a venda de equipamentos (vitrines e balcões expositores), manutenção preventiva e o desenvolvimento de projetos personalizados para o setor alimentício.",
         tags: ["React JS", "Tailwind CSS", "Hospedagem"],
         color: "from-blue-500/20 to-cyan-500/20",
         accent: "#3B82F6",
         icon: "❄️",
         type: "site",
         url: "https://www.aerrefrigeracao.com.br/",
+    },
+    {
+        id: 6,
+        name: "Yixin Traduções",
+        category: "Editora & Tradução",
+        description:
+            "Plataforma completa para uma editora independente especializada em literatura chinesa. O projeto engloba serviços de interpretação de conferência, legendagem audiovisual, localização de games e um catálogo interativo de publicações literárias.",
+        tags: ["React JS", "Design Premium", "Localização"],
+        color: "from-stone-800/40 to-black/60",
+        accent: "#c4a484", // Tom bronzeado das imagens
+        icon: "🏮",
+        type: "site",
+        url: "https://yixin.com.br/", // Ou o subdomínio que estiver usando
     },
     {
         id: 3,
@@ -110,11 +123,10 @@ export default function Projects() {
                         <button
                             key={f.key}
                             onClick={() => setActiveFilter(f.key)}
-                            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                                activeFilter === f.key
+                            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeFilter === f.key
                                     ? "gradient-bg text-white shadow-lg shadow-primary/30"
                                     : "glass text-gray-400 hover:text-white border border-white/10"
-                            }`}
+                                }`}
                         >
                             {f.label}
                         </button>
@@ -127,9 +139,8 @@ export default function Projects() {
                         <div
                             key={project.id}
                             onClick={() => handleProjectClick(project.url)}
-                            className={`glass rounded-3xl overflow-hidden card-hover border border-white/5 cursor-pointer flex flex-col ${
-                                project.featured ? "md:col-span-2" : ""
-                            }`}
+                            className={`glass rounded-3xl overflow-hidden card-hover border border-white/5 cursor-pointer flex flex-col ${project.featured ? "md:col-span-2" : ""
+                                }`}
                         >
                             {/* Visual area */}
                             <div className={`bg-gradient-to-br ${project.color} h-56 flex items-center justify-center relative overflow-hidden`}>
@@ -164,7 +175,7 @@ export default function Projects() {
                                 <p className="text-gray-400 leading-relaxed mb-6">
                                     {project.description}
                                 </p>
-                                
+
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {project.tags.map((tag) => (
                                         <span
@@ -184,7 +195,7 @@ export default function Projects() {
                                 {/* Link Condicional */}
                                 <div className="mt-auto">
                                     {project.id === 5 ? (
-                                        <span 
+                                        <span
                                             className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition-all duration-300 hover:text-white hover:gap-4"
                                         >
                                             Ver todos os repositórios <span>→</span>
