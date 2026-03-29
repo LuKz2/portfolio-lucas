@@ -73,12 +73,12 @@ const projects = [
         category: "Aplicativo Mobile",
         description:
             "Aplicativo mobile desenvolvido em React Native para conectar pessoas através de conversas significativas. Interface intuitiva, performance nativa e experiência de usuário fluida.",
-        tags: ["React Native", "Node.js", "Mobile"],
+        tags: ["React Native", "Node.js", "Mobile", "Em desenvolvimento"],
         color: "from-green-500/20 to-teal-500/20",
         accent: "#10B981",
+        status: "Em desenvolvimento",
         icon: "💬",
         type: "app",
-        featured: true,
         url: "https://play.google.com/store/apps/details?id=com.talkaboutit&hl=pt",
     },
 ];
