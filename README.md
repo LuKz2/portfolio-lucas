@@ -1,16 +1,41 @@
-# React + Vite
+# Lucas de Oliveira Angelo 🚀
+### Front-end Developer | React & Node.js Specialist
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio! Sou um desenvolvedor focado em criar interfaces modernas e funcionais, unindo design e performance. Atualmente, dedico meu tempo ao desenvolvimento web e à exploração de infraestrutura de servidores.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👨‍💻 Sobre Mim
+Desenvolvedor apaixonado por transformar ideias em código. Tenho experiência sólida com o ecossistema **React** e **Vite**, além de trabalhar com **Node.js** para soluções escaláveis. Além do código, me interesso por administração de redes e servidores Ubuntu.
 
-## React Compiler
+## 🛠️ Minha Tech Stack
+* **Front-end:** React, Vite, JavaScript (ES6+), CSS3 (Styled Components/Tailwind).
+* **Back-end:** Node.js, Gestão de dados em JSON.
+* **Infraestrutura:** Cloudflare, Ubuntu Server, Configuração de Firewall (WatchGuard).
+* **Ferramentas:** Git, GitHub Actions, Figma.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏗️ Projetos em Destaque
 
-## Expanding the ESLint configuration
+### 💡 Yixin - Iluminação Industrial
+Desenvolvimento de uma plataforma de catálogo para luminárias industriais de alta performance.
+* **Foco:** Organização de produtos técnicos (Modelos Blindados, Tubulares e Sinalizadores).
+* **Tech:** React + Node.js com integração de DNS via Cloudflare.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎄 Gourmet Panetones
+Projeto focado em e-commerce e apresentação visual de produtos artesanais.
+* **Destaque:** Catálogo visual de panetones recheados (Ninho com Morango, Kinder Bueno, etc).
+
+---
+
+## 🐾 Além do Código
+Nas horas vagas, sou o humano do **Paçoca** 🐕 e entusiasta de segurança de rede.
+
+## 📬 Vamos nos conectar?
+| Canal | Contato |
+| :--- | :--- |
+| **Email** | lucasoliveiraangelo14@gmail.com |
+| **WhatsApp** | +55 11 92013-7384 |
+| **GitHub** | [github.com/LuKz2](https://github.com/LuKz2) |
+
+---
+*Este projeto foi inicializado com React + Vite.*
