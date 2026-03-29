@@ -42,7 +42,7 @@ export default function About() {
               Sou o <strong>Lucas de Oliveira Angelo</strong>, desenvolvedor Full Stack. Moro em Mairiporã e trabalho aqui na Prefeitura, mas estou sempre focado em criar soluções digitais que realmente funcionam e resolvem problemas.
             </p>
             <p className="text-gray-400 text-lg leading-relaxed mb-10">
-              Minha base vem desde o <strong>Ensino Médio Técnico Federal</strong> e hoje sigo evoluindo na <strong>FIAP</strong>. Tô buscando novos projetos para aplicar o que aprendo na prática, cuidando de tudo — do design à hospedagem e **renderização 3D interativa** — para entregar soluções modernas que fazem a diferença.
+              Minha base vem desde o <strong>Ensino Médio Técnico Federal</strong> e hoje sigo evoluindo na <strong>FIAP</strong>. Tô buscando novos projetos para aplicar o que aprendo na prática, cuidando de tudo — do design à hospedagem e renderização 3D interativa — para entregar soluções modernas que fazem a diferença.
             </p>
 
             <div className="flex flex-wrap gap-3">
