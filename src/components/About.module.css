@@ -1,0 +1,111 @@
+.section {
+  padding-block: var(--space5XL);
+  border-top: 1px solid var(--line);
+}
+
+.container {
+  max-width: var(--maxWidth);
+  margin-inline: auto;
+  padding-inline: var(--spaceOuter);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space5XL);
+  align-items: start;
+}
+
+.eyebrow {
+  font-size: var(--fontSizeBodyXS);
+  font-weight: var(--fontWeightMedium);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacingLabel);
+  color: var(--accent);
+  margin-bottom: var(--spaceL);
+}
+
+.title {
+  font-size: var(--fontSizeH2);
+  margin-bottom: var(--spaceXL);
+}
+.accent {
+  color: var(--accent);
+}
+
+.text {
+  font-size: var(--fontSizeBodyL);
+  color: var(--textBody);
+  margin-bottom: var(--spaceL);
+  max-width: 54ch;
+}
+.strong {
+  color: var(--text);
+  font-weight: var(--fontWeightMedium);
+}
+
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spaceM) var(--spaceL);
+  margin-top: var(--spaceXL);
+}
+.tech {
+  position: relative;
+  padding-left: 16px;
+  font-family: var(--monoFontStack);
+  font-size: var(--fontSizeBodyXS);
+  color: var(--textLight);
+}
+.tech::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 65%, transparent);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.stat {
+  background: var(--background);
+  padding: var(--space2XL) var(--spaceXL);
+  transition: background var(--durationS) var(--bezier);
+}
+.stat:hover {
+  background: var(--backgroundLight);
+}
+.statValue {
+  font-size: var(--fontSizeH3);
+  font-weight: var(--fontWeightMedium);
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: var(--spaceM);
+}
+.statLabel {
+  font-size: var(--fontSizeBodyXS);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--textLight);
+}
+
+@media (max-width: 1040px) {
+  .section {
+    padding-block: var(--space4XL);
+  }
+  .container {
+    grid-template-columns: 1fr;
+    gap: var(--space3XL);
+  }
+  .stats {
+    max-width: 460px;
+  }
+}

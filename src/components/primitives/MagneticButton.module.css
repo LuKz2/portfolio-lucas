@@ -1,0 +1,42 @@
+.button {
+  --pad: 15px 30px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: var(--pad);
+  border-radius: 999px;
+  font-size: var(--fontSizeBodyS);
+  font-weight: var(--fontWeightMedium);
+  letter-spacing: 0.01em;
+  transition:
+    transform var(--durationM) var(--bezier),
+    background var(--durationS) var(--bezier),
+    color var(--durationS) var(--bezier),
+    border-color var(--durationS) var(--bezier);
+  will-change: transform;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.solid {
+  background: var(--accent);
+  color: var(--backgroundLight);
+}
+.solid:hover {
+  background: var(--text);
+}
+
+.ghost {
+  border: 1px solid var(--lineStrong);
+  color: var(--text);
+}
+.ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}

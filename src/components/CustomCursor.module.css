@@ -1,0 +1,71 @@
+.ring,
+.arrow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: var(--zIndex5);
+  opacity: 0;
+  will-change: transform;
+}
+
+.ring {
+  width: 34px;
+  height: 34px;
+  margin-left: -17px;
+  margin-top: -17px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  transition:
+    width var(--durationS) var(--bezier),
+    height var(--durationS) var(--bezier),
+    margin var(--durationS) var(--bezier),
+    background var(--durationS) var(--bezier),
+    opacity var(--durationS) var(--bezier);
+}
+
+.ringHover {
+  width: 56px;
+  height: 56px;
+  margin-left: -28px;
+  margin-top: -28px;
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+}
+
+/* Triângulo/seta que aponta na direção do movimento */
+.arrow {
+  width: 12px;
+  height: 13px;
+  margin-left: -6px;
+  margin-top: -6.5px;
+  background: var(--accent);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  transition: opacity var(--durationS) var(--bezier);
+}
+
+.visible {
+  opacity: 1;
+}
+
+/* Sobre elementos interativos o anel domina; a seta recua */
+.arrowHover {
+  opacity: 0.4;
+}
+
+@media (pointer: fine) {
+  :global(html.has-custom-cursor),
+  :global(html.has-custom-cursor a),
+  :global(html.has-custom-cursor button),
+  :global(html.has-custom-cursor input),
+  :global(html.has-custom-cursor textarea),
+  :global(html.has-custom-cursor label) {
+    cursor: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .ring,
+  .arrow {
+    display: none;
+  }
+}

@@ -1,0 +1,115 @@
+/* ------------------------------------------------------------------
+   Tokens de design — portados do projeto Yixin (app/.../theme.js)
+   Tema único (dark), carvão quente + acento terracota + ciano.
+------------------------------------------------------------------ */
+:root {
+  /* Cores base */
+  --black: oklch(0% 0 0);
+  --white: oklch(100% 0 0);
+
+  /* Superfícies */
+  --background: oklch(27.68% 0 0);
+  --backgroundLight: oklch(21.78% 0 0);
+  --surface: oklch(31% 0.004 65);
+
+  /* Acentos */
+  --primary: oklch(84.42% 0.19 202.24); /* ciano */
+  --accent: oklch(73.13% 0.0719 60.63); /* terracota / bege quente */
+  --error: oklch(65.91% 0.249 13.76);
+
+  /* Texto (leve tom quente) */
+  --text: oklch(96% 0.005 70);
+  --textTitle: var(--text);
+  --textBody: color-mix(in oklab, var(--text) 78%, transparent);
+  --textLight: color-mix(in oklab, var(--text) 55%, transparent);
+
+  /* Linhas / bordas */
+  --line: color-mix(in oklab, var(--text) 12%, transparent);
+  --lineStrong: color-mix(in oklab, var(--text) 22%, transparent);
+
+  /* Tipografia */
+  --fontStack: "Gotham", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --monoFontStack: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  --fontWeightRegular: 400;
+  --fontWeightMedium: 500;
+  --fontWeightBold: 700;
+
+  --fontSizeH0: 7.5rem;
+  --fontSizeH1: 5rem;
+  --fontSizeH2: 3.25rem;
+  --fontSizeH3: 2.125rem;
+  --fontSizeH4: 1.5rem;
+  --fontSizeBodyXL: 1.375rem;
+  --fontSizeBodyL: 1.25rem;
+  --fontSizeBodyM: 1.125rem;
+  --fontSizeBodyS: 1rem;
+  --fontSizeBodyXS: 0.875rem;
+
+  --lineHeightTitle: 1.02;
+  --lineHeightBody: 1.6;
+  --letterSpacingTitle: -0.02em;
+  --letterSpacingLabel: 0.24em;
+
+  /* Espaçamento */
+  --spaceOuter: 64px;
+  --spaceXS: 4px;
+  --spaceS: 8px;
+  --spaceM: 16px;
+  --spaceL: 24px;
+  --spaceXL: 32px;
+  --space2XL: 48px;
+  --space3XL: 64px;
+  --space4XL: 96px;
+  --space5XL: 128px;
+
+  /* Layout */
+  --maxWidth: 1140px;
+
+  /* Movimento */
+  --bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --durationXS: 200ms;
+  --durationS: 300ms;
+  --durationM: 400ms;
+  --durationL: 600ms;
+  --durationXL: 800ms;
+
+  /* Z-index */
+  --zIndex0: 0;
+  --zIndex1: 4;
+  --zIndex2: 8;
+  --zIndex3: 16;
+  --zIndex4: 32;
+  --zIndex5: 64;
+}
+
+@media (max-width: 1680px) {
+  :root {
+    --fontSizeH0: 6rem;
+    --fontSizeH1: 4.375rem;
+    --fontSizeH2: 3.125rem;
+    --spaceOuter: 48px;
+    --maxWidth: 1080px;
+  }
+}
+
+@media (max-width: 1040px) {
+  :root {
+    --fontSizeH0: 5rem;
+    --fontSizeH1: 3.75rem;
+    --fontSizeH2: 3rem;
+    --fontSizeH3: 2rem;
+    --fontSizeH4: 1.375rem;
+  }
+}
+
+@media (max-width: 696px) {
+  :root {
+    --fontSizeH0: 3.25rem;
+    --fontSizeH1: 2.75rem;
+    --fontSizeH2: 2.125rem;
+    --fontSizeH3: 1.75rem;
+    --fontSizeBodyL: 1.0625rem;
+    --fontSizeBodyM: 1rem;
+    --spaceOuter: 24px;
+  }
+}

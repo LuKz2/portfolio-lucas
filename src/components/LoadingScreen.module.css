@@ -1,0 +1,84 @@
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--zIndex5) + 5);
+  background: var(--backgroundLight);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space3XL);
+  transition: transform var(--durationL) var(--bezier);
+}
+
+.leaving {
+  transform: translateY(-100%);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spaceM);
+  animation: fade var(--durationL) var(--bezier) both;
+}
+
+.brand {
+  font-size: var(--fontSizeH3);
+  font-weight: var(--fontWeightBold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.dot {
+  color: var(--accent);
+}
+
+.role {
+  font-family: var(--monoFontStack);
+  font-size: var(--fontSizeBodyXS);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--textLight);
+}
+
+.progress {
+  width: min(280px, 60vw);
+  height: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+.progressBar {
+  height: 100%;
+  width: 100%;
+  transform-origin: left;
+  background: var(--accent);
+}
+
+.count {
+  position: absolute;
+  bottom: var(--spaceOuter);
+  right: var(--spaceOuter);
+  font-family: var(--monoFontStack);
+  font-size: var(--fontSizeH4);
+  color: var(--textLight);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 696px) {
+  .count {
+    bottom: var(--spaceL);
+    right: var(--spaceL);
+  }
+}

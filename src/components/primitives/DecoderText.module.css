@@ -1,0 +1,12 @@
+.root {
+  display: inline;
+}
+
+.output {
+  display: inline;
+}
+
+.ghost {
+  color: var(--accent);
+  opacity: 0.7;
+}

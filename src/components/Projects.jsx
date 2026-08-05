@@ -1,223 +1,126 @@
-import React, { useState } from "react";
+import React from "react";
+import { ArrowUpRight } from "lucide-react";
+import Section from "./primitives/Section";
+import Reveal from "./primitives/Reveal";
+import styles from "./Projects.module.css";
 
 const projects = [
-    {
-        id: 1,
-        name: "Delled",
-        category: "Catálogo Digital & Leads",
-        description:
-            "Site moderno e profissional para a Delled (atualmente em desenvolvimento). O projeto tem como foco apresentar os produtos e serviços da empresa de forma clara e atrativa, com o objetivo de gerar mais leads e credibilidade no mercado.",
-        status: "Em desenvolvimento",
-        tags: ["React JS", "Tailwind CSS", "Node.js", "Em desenvolvimento"],
-        color: "from-yellow-500/20 to-orange-500/20",
-        accent: "#F59E0B",
-        icon: "💡",
-        type: "site",
-        url: "https://delledproduct.tecnologia.ws/",
-    },
-    {
-        id: 2,
-        name: "AER Refrigeração",
-        category: "Catálogo Interativo",
-        description:
-            "Plataforma digital da AER Refrigeração, focada em soluções de refrigeração comercial e industrial. O site destaca a venda de equipamentos (vitrines e balcões expositores), manutenção preventiva e o desenvolvimento de projetos personalizados para o setor alimentício.",
-        tags: ["React JS", "Tailwind CSS", "Hospedagem"],
-        color: "from-blue-500/20 to-cyan-500/20",
-        accent: "#3B82F6",
-        icon: "❄️",
-        type: "site",
-        url: "https://www.aerrefrigeracao.com.br/",
-    },
-    {
-        id: 6,
-        name: "Yixin Traduções",
-        category: "Editora & Tradução",
-        description:
-            "Plataforma completa para uma editora independente especializada em literatura chinesa. O projeto engloba serviços de interpretação de conferência, legendagem audiovisual, localização de games e um catálogo interativo de publicações literárias.",
-        tags: ["React JS", "Design Premium", "Localização"],
-        color: "from-stone-800/40 to-black/60",
-        accent: "#c4a484", // Tom bronzeado das imagens
-        icon: "🏮",
-        type: "site",
-        url: "https://yixin.com.br/", // Ou o subdomínio que estiver usando
-    },
-    {
-        id: 3,
-        name: "ChatbotDelled",
-        category: "Automação & Chat",
-        description:
-            "Solução de chatbot inteligente desenvolvida para a Delled, automatizando o atendimento ao cliente, qualificando leads e respondendo dúvidas frequentes de forma instantânea.",
-        tags: ["Node.js", "React JS", "Automação"],
-        color: "from-purple-500/20 to-pink-500/20",
-        accent: "#8B5CF6",
-        icon: "🤖",
-        type: "site",
-        url: "https://chatbot-29e6d.web.app/",
-    },
-    {
-        id: 5,
-        name: "Meu GitHub",
-        category: "Repositórios",
-        description:
-            "Confira meu perfil completo no GitHub! Lá você encontrará todos os meus repositórios, contribuições em projetos open source e experimentos com novas tecnologias.",
-        tags: ["Open Source", "Code", "Full Stack"],
-        color: "from-gray-800/40 to-black/40",
-        accent: "#ffffff",
-        icon: "📂",
-        type: "site",
-        url: "https://github.com/LuKz2",
-    },
-    {
-        id: 4,
-        name: "Talk About It",
-        category: "Aplicativo Mobile",
-        description:
-            "Aplicativo mobile desenvolvido em React Native para conectar pessoas através de conversas significativas. Interface intuitiva, performance nativa e experiência de usuário fluida.",
-        tags: ["React Native", "Node.js", "Mobile", "Em desenvolvimento"],
-        color: "from-green-500/20 to-teal-500/20",
-        accent: "#10B981",
-        status: "Em desenvolvimento",
-        icon: "💬",
-        type: "app",
-        url: "https://play.google.com/store/apps/details?id=com.talkaboutit&hl=pt",
-    },
+  {
+    id: "delled",
+    name: "Delled",
+    category: "Catálogo Digital & Leads",
+    status: "Em desenvolvimento",
+    description:
+      "Site institucional moderno para a Delled. Apresenta produtos e serviços de forma clara e atrativa, com foco em transmitir credibilidade e gerar mais leads qualificados para a empresa.",
+    tags: ["React JS", "Tailwind CSS", "Node.js"],
+    img: "/projects/delled.jpg",
+    url: "https://delledproduct.tecnologia.ws/",
+  },
+  {
+    id: "aer",
+    name: "AER Refrigeração",
+    category: "Catálogo Interativo",
+    description:
+      "Plataforma para uma empresa de refrigeração comercial e industrial. Destaca a venda de equipamentos (vitrines e balcões expositores), manutenção preventiva e projetos personalizados para o setor alimentício.",
+    tags: ["React JS", "Three.js", "Hospedagem"],
+    img: "/projects/aer.jpg",
+    url: "https://www.aerrefrigeracao.com.br/",
+  },
+  {
+    id: "yixin",
+    name: "Yixin Traduções",
+    category: "Editora & Tradução",
+    description:
+      "Plataforma completa para uma editora independente de literatura chinesa. Reúne serviços de interpretação de conferência, legendagem audiovisual, localização de games e um catálogo interativo de publicações literárias.",
+    tags: ["Remix", "Three.js", "Localização"],
+    img: "/projects/yixin.jpg",
+    url: "https://yixin.com.br/",
+  },
+  {
+    id: "chatbot",
+    name: "ChatbotDelled",
+    category: "Automação & Chat",
+    description:
+      "Chatbot inteligente desenvolvido para a Delled. Automatiza o atendimento ao cliente, qualifica leads e responde às dúvidas mais frequentes de forma instantânea, 24 horas por dia.",
+    tags: ["Node.js", "React JS", "Automação"],
+    img: "/projects/chatbot.jpg",
+    url: "https://chatbot-29e6d.web.app/",
+  },
+  {
+    id: "talkaboutit",
+    name: "Talk About It",
+    category: "Aplicativo Mobile",
+    status: "Em desenvolvimento",
+    description:
+      "Aplicativo mobile em React Native para conectar pessoas através de conversas significativas. Interface intuitiva, performance nativa e uma experiência de uso fluida, publicado na Google Play.",
+    tags: ["React Native", "Node.js", "Mobile"],
+    img: "/projects/talkaboutit.jpg",
+    url: "https://play.google.com/store/apps/details?id=com.talkaboutit&hl=pt",
+  },
+  {
+    id: "github",
+    name: "GitHub",
+    category: "Repositórios & Open Source",
+    description:
+      "Meu perfil no GitHub reúne todos os repositórios, contribuições em projetos open source e experimentos com novas tecnologias — do front-end ao back-end e mobile.",
+    tags: ["Open Source", "Full Stack", "Code"],
+    img: "/projects/github.jpg",
+    url: "https://github.com/LuKz2",
+  },
 ];
 
 export default function Projects() {
-    const [activeFilter, setActiveFilter] = useState("all");
+  return (
+    <Section
+      id="projects"
+      eyebrow="Portfólio"
+      title="Projetos que entregam resultado."
+      intro="Uma seleção de trabalhos — cada um pensado nos detalhes, na performance e no objetivo real do cliente."
+    >
+      <div className={styles.list}>
+        {projects.map((project, i) => (
+          <Reveal key={project.id} className={styles.row}>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.media}
+              aria-label={`Visitar ${project.name}`}
+            >
+              <img src={project.img} alt={`Projeto ${project.name}`} loading="lazy" />
+            </a>
 
-    const filtered =
-        activeFilter === "all"
-            ? projects
-            : projects.filter((p) => p.type === activeFilter);
+            <div className={styles.body}>
+              <div className={styles.meta}>
+                <span className={styles.index}>{String(i + 1).padStart(2, "0")}</span>
+                <span className={styles.category}>{project.category}</span>
+              </div>
 
-    const handleProjectClick = (url) => {
-        if (url) {
-            window.open(url, "_blank");
-        }
-    };
+              <h3 className={styles.name}>
+                {project.name}
+                {project.status && <span className={styles.badge}>{project.status}</span>}
+              </h3>
 
-    return (
-        <section id="projects" className="py-32 relative">
-            <div className="max-w-7xl mx-auto px-6">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <p className="text-secondary font-semibold text-sm uppercase tracking-widest mb-4">
-                        Portfólio
-                    </p>
-                    <h2 className="text-4xl md:text-5xl font-black mb-6">
-                        Projetos que <span className="gradient-text">entregam resultado</span>
-                    </h2>
-                    <p className="text-gray-400 text-lg max-w-xl mx-auto">
-                        Cada projeto é desenvolvido com atenção aos detalhes, performance e foco total no objetivo do cliente.
-                    </p>
-                </div>
+              <p className={styles.desc}>{project.description}</p>
 
-                {/* Filters */}
-                <div className="flex justify-center gap-3 mb-12">
-                    {[
-                        { key: "all", label: "Todos" },
-                        { key: "site", label: "Sites" },
-                        { key: "app", label: "Apps" },
-                    ].map((f) => (
-                        <button
-                            key={f.key}
-                            onClick={() => setActiveFilter(f.key)}
-                            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeFilter === f.key
-                                    ? "gradient-bg text-white shadow-lg shadow-primary/30"
-                                    : "glass text-gray-400 hover:text-white border border-white/10"
-                                }`}
-                        >
-                            {f.label}
-                        </button>
-                    ))}
-                </div>
+              <ul className={styles.tags}>
+                {project.tags.map((tag) => (
+                  <li key={tag} className={styles.tag}>{tag}</li>
+                ))}
+              </ul>
 
-                {/* Grid */}
-                <div className="grid md:grid-cols-2 gap-6">
-                    {filtered.map((project) => (
-                        <div
-                            key={project.id}
-                            onClick={() => handleProjectClick(project.url)}
-                            className={`glass rounded-3xl overflow-hidden card-hover border border-white/5 cursor-pointer flex flex-col ${project.featured ? "md:col-span-2" : ""
-                                }`}
-                        >
-                            {/* Visual area */}
-                            <div className={`bg-gradient-to-br ${project.color} h-56 flex items-center justify-center relative overflow-hidden`}>
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div
-                                        className="w-40 h-40 rounded-full blur-3xl opacity-40"
-                                        style={{ backgroundColor: project.accent }}
-                                    />
-                                </div>
-                                <div className="relative z-10 text-center">
-                                    <div className="text-7xl mb-4">{project.icon}</div>
-                                    <div
-                                        className="glass px-4 py-1.5 rounded-full text-xs font-semibold"
-                                        style={{ color: project.accent }}
-                                    >
-                                        {project.category}
-                                    </div>
-                                </div>
-
-                                {project.featured && (
-                                    <div className="absolute top-4 right-4 gradient-bg px-3 py-1 rounded-full text-xs font-bold text-white">
-                                        ★ Destaque
-                                    </div>
-                                )}
-                            </div>
-
-                            {/* Content */}
-                            <div className="p-8 flex flex-col flex-grow">
-                                <h3 className="text-2xl font-bold text-white mb-3">
-                                    {project.name}
-                                </h3>
-                                <p className="text-gray-400 leading-relaxed mb-6">
-                                    {project.description}
-                                </p>
-
-                                <div className="flex flex-wrap gap-2 mb-8">
-                                    {project.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="text-xs px-3 py-1 rounded-full border"
-                                            style={{
-                                                color: project.accent,
-                                                borderColor: `${project.accent}40`,
-                                                backgroundColor: `${project.accent}10`,
-                                            }}
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {/* Link Condicional */}
-                                <div className="mt-auto">
-                                    {project.id === 5 ? (
-                                        <span
-                                            className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition-all duration-300 hover:text-white hover:gap-4"
-                                        >
-                                            Ver todos os repositórios <span>→</span>
-                                        </span>
-                                    ) : (
-                                        <a
-                                            href="https://wa.me/5511920137384"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={(e) => e.stopPropagation()}
-                                            className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300 hover:gap-4 z-20 relative"
-                                            style={{ color: project.accent }}
-                                        >
-                                            Quero algo assim <span>→</span>
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                Visitar projeto <ArrowUpRight size={16} />
+              </a>
             </div>
-        </section>
-    );
+          </Reveal>
+        ))}
+      </div>
+    </Section>
+  );
 }
