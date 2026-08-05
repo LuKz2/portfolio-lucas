@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: var(--zIndex5);
+  z-index: calc(var(--zIndex5) + 10); /* sempre acima da navbar e do resto */
   opacity: 0;
   will-change: transform;
 }
