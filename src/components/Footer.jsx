@@ -18,7 +18,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className={styles.contact}
         >
-          (11) 92013-7384
+          (11) 97605-3974
         </a>
       </div>
     </footer>
