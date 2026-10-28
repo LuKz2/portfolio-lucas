@@ -11,7 +11,7 @@ const contacts = [
     Icon: MessageCircle,
     title: "WhatsApp",
     sub: "(11) 92013-7384",
-    href: "https://wa.me/5511920137384",
+    href: "https://wa.me/5511976053974",
   },
   {
     Icon: Linkedin,
@@ -33,7 +33,7 @@ export default function Contact() {
     e.preventDefault();
     const text = `Olá Lucas! Me chamo ${form.name} (${form.email}).\n\n${form.message}`;
     window.open(
-      `https://wa.me/5511920137384?text=${encodeURIComponent(text)}`,
+      `https://wa.me/5511976053974?text=${encodeURIComponent(text)}`,
       "_blank"
     );
   };

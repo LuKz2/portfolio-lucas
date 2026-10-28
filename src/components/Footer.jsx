@@ -13,7 +13,7 @@ export default function Footer() {
           © {year} Lucas de Oliveira Angelo. Todos os direitos reservados.
         </p>
         <a
-          href="https://wa.me/5511920137384"
+          href="https://wa.me/5511976053974"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.contact}

@@ -47,7 +47,7 @@ export default function Hero() {
             Ver projetos <ArrowDown size={17} />
           </MagneticButton>
           <MagneticButton
-            href="https://wa.me/5511920137384"
+            href="https://wa.me/5511976053974"
             target="_blank"
             rel="noopener noreferrer"
             variant="ghost"
